@@ -1,0 +1,12 @@
+[Unit]
+Description=CheeseChain Form Explorer and Answers Retrieval System (FEARS) Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=eder
+ExecStart=/usr/bin/env python3 /home/<user>/cheesechain/private/server.py
+
+[Install]
+WantedBy=multi-user.target

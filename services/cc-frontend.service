@@ -1,0 +1,16 @@
+[Unit]
+Description=CheeseChain Frontend Service
+After=network.target
+StartLimitIntervalSec=0[Service]
+
+[Service]
+Environment=NODE_PORT=3000
+Type=simple
+User=root
+ExecStart=/usr/bin/env yarn  <path>
+Restart=always
+RestartSec=1
+
+
+[Install]
+WantedBy=multi-user.target
